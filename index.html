@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Distribuidora Moreno | Vísceras de Puerco y Res al Mayoreo</title>
 <meta name="description" content="Distribuidora Moreno - Mayoristas y abastecedores de vísceras de puerco y res: hígado, riñón, tripa, panza, corazón, lengua y más, para carnicerías, restaurantes y negocios de todos los tamaños.">
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=18">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
+<!-- Botón para regresar arriba -->
+<button class="back-to-top" id="backToTop" aria-label="Regresar arriba">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 15 6-6 6 6"/></svg>
+</button>
 
 <!-- ===================== BARRA SUPERIOR ===================== -->
 <div class="topbar">
@@ -63,6 +69,13 @@
     </nav>
   </div>
 </header>
+
+<!-- Botones flotantes de redes sociales -->
+<!-- PLACEHOLDER: reemplazar enlaces de redes sociales -->
+<div class="social-float">
+  <a href="#" target="_blank" rel="noopener" class="float-facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8h3.3z"/></svg></a>
+  <a href="#" target="_blank" rel="noopener" class="float-tiktok" aria-label="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+</div>
 
 <!-- Botón flotante de WhatsApp -->
 <a href="https://wa.me/525626157211?text=Hola%2C%20quiero%20cotizar%20un%20pedido%20al%20mayoreo" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
@@ -294,45 +307,60 @@
 <section id="contacto" class="section section-contact dark">
   <div class="container">
     <div class="contact-layout">
-      <div class="contact-info">
-        <h2>Contáctanos</h2>
-        <p class="lead-left">Escríbenos y cotiza tu pedido al mayoreo. ¿Qué necesitas?</p>
-        <div class="info-block">
-          <h3>Teléfono / WhatsApp</h3>
-          <p><a href="tel:+525626157211">56 2615 7211</a></p>
-        </div>
-        <div class="info-block">
-          <h3>Correo</h3>
-          <p>distribuidoramorenox@gmail.com</p>
-        </div>
-        <div class="info-block">
-          <h3>Dirección</h3>
-          <p>Av. Rancho Grande #127</p>
-        </div>
-        <a href="https://wa.me/525626157211?text=Hola%2C%20quiero%20cotizar%20un%20pedido%20al%20mayoreo" target="_blank" rel="noopener" class="btn btn-primary">Escríbenos por WhatsApp</a>
-      </div>
-
       <form class="contact-form" id="contactForm">
+        <p class="form-tag">Formulario de contacto</p>
+        <h3 class="form-title">Cotiza tu pedido al mayoreo</h3>
         <p class="form-note">Los campos marcados con <span class="required">*</span> son obligatorios</p>
         <div class="form-group">
           <label for="nombre">Nombre <span class="required">*</span></label>
-          <input type="text" id="nombre" name="nombre" required>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o el de tu negocio" required>
         </div>
         <div class="form-group">
           <label for="correo">Correo</label>
-          <input type="email" id="correo" name="correo">
+          <input type="email" id="correo" name="correo" placeholder="tu@correo.com">
         </div>
         <div class="form-group">
           <label for="telefono">Teléfono <span class="required">*</span></label>
-          <input type="tel" id="telefono" name="telefono" required>
+          <div class="phone-wrap">
+            <span class="phone-prefix">+52</span>
+            <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos" required>
+          </div>
         </div>
         <div class="form-group">
           <label for="mensaje">¿Cómo podemos ayudarte? <span class="required">*</span></label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej. 20 kg de panza y 10 kg de pata cada semana" required></textarea>
         </div>
-        <button type="submit" class="btn btn-submit">Enviar</button>
+        <button type="submit" class="btn btn-submit">Enviar →</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
+
+      <div class="contact-info">
+        <p class="section-tag">Atención directa</p>
+        <h2>Contáctanos</h2>
+        <p class="lead-left">Escríbenos y cotiza tu pedido al mayoreo. ¿Qué necesitas?</p>
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div>
+          <div>
+            <h3>Teléfono / WhatsApp</h3>
+            <p><a href="tel:+525626157211">56 2615 7211</a></p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div>
+            <h3>Correo</h3>
+            <p>distribuidoramorenox@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div>
+            <h3>Dirección</h3>
+            <p>Av. Rancho Grande #127</p>
+          </div>
+        </div>
+        <a href="https://wa.me/525626157211?text=Hola%2C%20quiero%20cotizar%20un%20pedido%20al%20mayoreo" target="_blank" rel="noopener" class="btn btn-primary">Escríbenos por WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
@@ -376,6 +404,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="script.js"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>
